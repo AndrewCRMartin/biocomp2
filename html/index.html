@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<!-- A header comment goes here
+-->
+
+<html>
+  <head>
+    <title>Biocomputing II - framework</title>
+    <link rel='stylesheet' type='text/css' href='css/biocomp2.css' />
+  </head>
+  
+  <body>
+    <div class='content'>
+      <h1>Biocomputing II - framework</h1>
+      <p>A simple demo of how the Biocomputing II project should work and
+        be submitted. It shows how the API between the layers is organized.</p>
+      
+      <p>Most importantly, it shows how you <b>must</b> organize your code
+        in GitHub for marking.</p>
+      
+      <p>
+        <!-- You will have to replace this with something along the lines
+        of /cgi-bin/cgiwrap/XX001/listall.py
+        -->
+        
+        <a href='/cgi-bin/biocomp2/cgi/listall.py'>List all entries</a>
+      </p>
+      
+      <form action='/cgi-bin/biocomp2/cgi/search.py' method='get'>
+        <p>Search by:</p>
+        
+        <table>
+          <tr>
+            <td>gene identifier</td>
+            <td><input type='text' name='gi'/></td>
+          </tr>
+          <tr>
+            <td>protein product</td>
+            <td><input type='text' name='protein'/></td>
+          </tr>
+          <tr>
+            <td>genbank accession</td>
+            <td><input type='text' name='gb'/></td>
+          </tr>
+          <tr>
+            <td>chromosomal location</td>
+            <td><input type='text' name='loc'/></td>
+          </tr>
+        </table>
+
+        <p><input type='Submit' value='Search' /></p>
+
+      </form>
+    </div> <!-- content -->
+  </body>
+</html>
