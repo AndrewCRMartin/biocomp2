@@ -2,10 +2,10 @@ Birkbeck Biocomputing II Skeleton Code
 ======================================
 
 This provides some skeleton code for demonstrating how the three-layer
-model works for the Biocomputin II project.
+model works for the Biocomputing II project.
 
-Most importantly, *it provides the required way in which files are
-laid out in the GitHib submission*.
+Most importantly, **it provides the required way in which files are
+laid out in the GitHib submission**.
 
 The code is organized into three main directories:
 
