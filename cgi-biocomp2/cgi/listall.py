@@ -20,12 +20,16 @@ entries = blapi.getAllEntries()
 html    = htmlutils.header()
 
 html += "<h1>Demo list of all entries</h1>\n"
-html += "      <ul>\n"
+html += "  <table>\n"
 
 for entry in entries:
-    html += "        <li>" + entry + "</li>\n"
+    html += "    <tr><td>"
+    html += "<a href='" + config.searchurl + "?ac=" + entry + "'>"
+    html += entry + "</a>"
+    html += "</td></tr>\n"
 
-html += "      </ul>\n"
+    
+html += "  </table>\n"
 html += htmlutils.footer()
 
 print(html)

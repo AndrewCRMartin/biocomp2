@@ -12,16 +12,21 @@ import sys
 sys.path.insert(0, "../bl/")
 sys.path.insert(0, "../")
 
+import cgi        # Import the CGI module
+
 import blapi      # Import the Business Logic API
 import htmlutils  # Import HTML utilities
 import config     # Import configuration information (e.g. URLs)
 
-html    = htmlutils.header()
+form = cgi.FieldStorage()
+accession = str(form.getvalue('ac'))
+
 #result = blapi.search(someParam from form)
 
+html    = htmlutils.header()
 html += "<h1>Dummy search code</h1>\n"
 html += "      <ul>\n"
-html += "        <li>Result of search</li>\n"
+html += "        <li>Result of search for '" + accession + "'</li>\n"
 html += "      </ul>\n"
 html += htmlutils.footer()
 
