@@ -17,10 +17,14 @@ import htmlutils  # Import HTML utilities
 import config     # Import configuration information (e.g. URLs)
 
 html    = htmlutils.header()
+entries = blapi.getAllEntries()
 
 html += "<h1>Dummy search code</h1>\n"
 html += "      <ul>\n"
-html += "        <li>Some search result</li>\n"
+
+for entry in entries:
+    html += "        <li>" + entry + "</li>\n"
+
 html += "      </ul>\n"
 html += htmlutils.footer()
 
