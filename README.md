@@ -5,7 +5,24 @@ This provides some skeleton code for demonstrating how the three-layer
 model works for the Biocomputing II project.
 
 Most importantly, **it provides the required way in which files are
-laid out in the GitHib submission**.
+expected to be laid out in the GitHib submission**.
+
+A good place to start would be to try this out. 
+
+1. Edit the file `install.sh` to replace the values of `html` and `cgi`
+with the locations where you need to install your HTML files and CGI
+scripts.
+
+2. Edit the file `cgi-biocomp2/config_demo.py` and change `cgiURL` to
+point to the path used to access a CGI script in a URL (something like
+`/cgi-bin/cgiwrap/ab123/` (where `ab123` is replaced by your username).
+
+3. Run the install script by typing `./install.sh`
+
+You should now be able to point your browser to the URL of the
+location in which you stored the HTML.
+
+-----------------------------------------------------------------------
 
 The code is organized into three main directories:
 
