@@ -5,7 +5,7 @@ mkdir -p $html
 mkdir -p $cgi
 
 # For the purpose of this demo
-(cd cgi-biocomp2; ln -s config_demo.py config.py)
+(cd cgi-biocomp2; ln -sf config_demo.py config.py)
 
 (cd html; ./index.py > index.html)
 
