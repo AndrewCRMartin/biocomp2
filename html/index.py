@@ -29,8 +29,11 @@ print(
       <p>A simple demo of how the Biocomputing II project should work and
         be submitted. It shows how the API between the layers is organized.</p>
       
-      <p>Most importantly, it shows how you <b>must</b> organize your code
-        in GitHub for marking.</p>
+      <p>Most importantly, it shows how you how you are <b>strongly
+        recommended</b> to organize your code in GitHub for
+        marking. If you deviate from this, you must have a very good
+        reason!
+      </p>
       
       <p>
         <a href='""" + config.listallurl + """'>List all entries</a>
@@ -41,16 +44,16 @@ print(
         
         <table>
           <tr>
+            <td>genbank accession</td>
+            <td><input type='text' name='ac'/> (only this works in the demo)</td>
+          </tr>
+          <tr>
             <td>gene identifier</td>
             <td><input type='text' name='gi'/></td>
           </tr>
           <tr>
             <td>protein product</td>
             <td><input type='text' name='protein'/></td>
-          </tr>
-          <tr>
-            <td>genbank accession</td>
-            <td><input type='text' name='ac'/></td>
           </tr>
           <tr>
             <td>chromosomal location</td>
