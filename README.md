@@ -24,6 +24,40 @@ location in which you stored the HTML.
 
 -----------------------------------------------------------------------
 
+How to use this skeleton
+------------------------
+
+1. *One member of your team* must create a **private** repository
+on your GitHub account.
+
+2. Allow the other members of the team read/write access to the repository:
+
+- Click `Settings` (at the top)
+- Click `Manage access` (on the left)
+- Click `Invite a collaborator`
+- Add each of the members of your team
+
+We will assume your GitHub username is `JohnSmith` and your repository
+is called `BBKProject`. Take the following steps:
+
+```
+git clone git@github.com:AndrewCRMartin/biocomp2.git
+cd biocomp2
+git remote rm origin
+git remote add origin git@github.com:JohnSmith/BBKProject.git
+git push -u origin master
+```
+
+You have now created your own repository which is a copy of this
+skeleton project and synchronized it with your own GitHub.
+
+You can now all clone the repository to your own machines or unix
+accounts and edit the code. Don't forget to commit and push your
+changes back to GitHub regularly and remember to pull down other
+people's changes.
+
+-----------------------------------------------------------------------
+
 The code is organized into three main directories:
 
 - `createdb` This is where the code will live to parse the Genbank
