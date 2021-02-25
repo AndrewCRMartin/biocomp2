@@ -5,8 +5,19 @@
 All URLs and database connection parameters should appear in here.
 """
 
-cgiURL="/cgi-bin/biocomp2/"
+# The base (relative) URL for accessing your CGI scripts. At Birkbeck this
+# will be something like:
+#    cgiURL="/cgi-bin/cgiwrap/ab123"
+# (where `ab123` is replaced by your username).
+cgiURL="/cgi-bin"
 
 
-searchurl  = cgiURL + "cgi/search.py"
-listallurl = cgiURL + "cgi/listall.py"
+
+
+
+
+
+#--------------------------------------------------------------------------
+# You shouldn't need to touch anything below here for running the demo
+searchurl  = cgiURL + "/biocomp2demo/cgi/search.py"
+listallurl = cgiURL + "/biocomp2demo/cgi/listall.py"

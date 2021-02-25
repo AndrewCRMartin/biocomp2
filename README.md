@@ -80,7 +80,5 @@ represent the three layers of code:
 
 - `cgi-biocomp2/db` contains the database access layer code.
 
-In the top directory is a demonstration script that will copy the
-files to HTML and cgi-bin directories. Obviously the destination for
-these will be different for you working on the server at Birkbeck.
+The `install.sh` script in the top directory is a demonstration script that will copy the files to HTML and cgi-bin directories. See the instructions above for using these on the server at Birkbeck.
 
