@@ -5,22 +5,17 @@
 # directories
 #
 #
-# Specify the HTML and CGI script directories. At Birkbeck, after you have
-# set up the web directories as instructed in the CGI practical, these
-# will be:
-#    html=${HOME}/WWW/biocomp2demo
-#    cgi=${HOME}/WWW/cgi-bin/biocomp2demo
-html=/var/www/html/biocomp2demo
-cgi=/var/www/cgi-bin/biocomp2demo
 
+if [ ! -f config.sh ]; then
+    echo ""
+    echo "You need to create a config.sh file"
+    echo "Tip: create a symbolic link from the appropriate example file - "
+    echo "     ln -s config_bbk.sh config.sh"
+    echo ""
+    exit 0;
+fi
 
-
-
-
-
-
-
-
+. ./config.sh
 
 #--------------------------------------------------------------------------
 # You shouldn't need to touch anything below here for running the demo
@@ -37,14 +32,20 @@ mkdir -p $cgi
 cp -R html/* $html
 chmod -R a+r $html/*
 
-# Install CGI scripts and ensure they are readable and eecutable by everyone
+# Install CGI scripts and ensure they are readable and excutable by everyone
 cp -R cgi-biocomp2/* $cgi
 chmod -R a+rx $cgi/*
+
+# Install an htaccess file if needed
+if [ $htaccess == '1' ]; then
+    cp htaccess $cgi/.htaccess
+    cp htaccess $cgi/cgi/.htaccess
+fi
 
 # Report where you access this
 echo "You can now access the web site at:"
 echo "   http://BASEURL/biocomp2demo/"
 echo "At Birkbeck, this will typically be:"
 user=`whoami`
-url="http://student.cryst.bbk.ac.uk/~${user}/biocomp2/"
+url="http://student.cryst.bbk.ac.uk/~${user}/biocomp2demo/"
 echo "   $url"
