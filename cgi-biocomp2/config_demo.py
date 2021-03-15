@@ -19,5 +19,5 @@ cgiURL="/cgi-bin"
 
 #--------------------------------------------------------------------------
 # You shouldn't need to touch anything below here for running the demo
-searchurl  = cgiURL + "/biocomp2demo/cgi/search.py"
-listallurl = cgiURL + "/biocomp2demo/cgi/listall.py"
+searchurl  = cgiURL + "/biocomp2demo/cgi/search.cgi"
+listallurl = cgiURL + "/biocomp2demo/cgi/listall.cgi"

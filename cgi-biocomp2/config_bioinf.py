@@ -9,7 +9,7 @@ All URLs and database connection parameters should appear in here.
 # will be something like:
 #    cgiURL="/cgi-bin/cgiwrap/ab123"
 # (where `ab123` is replaced by your username).
-cgiURL="./cgi"
+cgiURL="/teaching/bbk/biocomp2/project/demo/cgi"
 
 
 
@@ -19,5 +19,5 @@ cgiURL="./cgi"
 
 #--------------------------------------------------------------------------
 # You shouldn't need to touch anything below here for running the demo
-searchurl  = cgiURL + "/search.py"
-listallurl = cgiURL + "/listall.py"
+searchurl  = cgiURL + "/search.cgi"
+listallurl = cgiURL + "/listall.cgi"

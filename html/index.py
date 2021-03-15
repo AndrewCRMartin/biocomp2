@@ -34,6 +34,14 @@ print(
         marking. If you deviate from this, you must have a very good
         reason!
       </p>
+
+      <p><b>Note</b> that the Genbank accession search is guaranteed to
+         return zero or one entries; the other searches may return zero
+         to many entries. Consequently the search by Genbank accession
+         can take you to the detail page for that entry while the other
+         searches should take you to a list of hits (just as you have
+         when you list all entries).
+      </p>
       
       <p>
         <a href='""" + config.listallurl + """'>List all entries</a>
@@ -45,7 +53,7 @@ print(
         <table>
           <tr>
             <td>genbank accession</td>
-            <td><input type='text' name='ac'/> (only this works in the demo)</td>
+            <td><input type='text' name='ac'/> (only this search box works in the demo)</td>
           </tr>
           <tr>
             <td>gene identifier</td>

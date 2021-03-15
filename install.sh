@@ -12,6 +12,19 @@ if [ ! -f config.sh ]; then
     echo "Tip: create a symbolic link from the appropriate example file - "
     echo "     ln -s config_bbk.sh config.sh"
     echo ""
+fi
+
+if [ ! -f cgi-biocomp2/config.py ]; then
+    echo ""
+    echo "You need to create a cgi-biocomp2/config.py file"
+    echo "Tip: create a symbolic link from the appropriate example file - "
+    echo "     cd cgi-biocomp2"
+    echo "     ln -s config_demo.py config.py"
+    echo "     cd .."
+    echo ""
+fi
+
+if [ ! -f config.sh ] || [ ! -f cgi-biocomp2/config.py ]; then
     exit 0;
 fi
 
@@ -23,7 +36,7 @@ mkdir -p $html
 mkdir -p $cgi
 
 # For the purpose of this demo
-(cd cgi-biocomp2; ln -sf config_demo.py config.py)
+#(cd cgi-biocomp2; ln -sf config_demo.py config.py)
 
 # Create the index.html file
 (cd html; ./index.py > index.html)
