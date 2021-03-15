@@ -9,13 +9,17 @@ expected to be laid out in the GitHib submission**.
 
 A good place to start would be to try this out. 
 
-1. Edit the file `install.sh` to replace the values of `html` and `cgi`
-with the locations where you need to install your HTML files and CGI
+1. Create a file called `config.sh` using one of the `config_xxxx.sh`
+files as a template. At Birkbeck, you should just need to do `cp
+config_bbk.sh config.sh`. The values of `html` and `cgi`
+are the locations where you need to install your HTML files and CGI
 scripts.
 
-2. Edit the file `cgi-biocomp2/config_demo.py` and change `cgiURL` to
-point to the path used to access a CGI script in a URL (something like
-`/cgi-bin/cgiwrap/ab123/` (where `ab123` is replaced by your username).
+2. Create a file called `cgi-biocomp2/config.py`. You can use
+`cgi-biocomp2/config_demo.py` as a template. Change `cgiURL` to point
+to the path used to access a CGI script in a URL (at Birkbeck,
+something like `/cgi-bin/cgiwrap/ab123/` (where `ab123` is replaced by
+your username).
 
 3. Run the install script by typing `./install.sh`
 
