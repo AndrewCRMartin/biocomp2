@@ -17,9 +17,10 @@ fi
 if [ ! -f cgi-biocomp2/config.py ]; then
     echo ""
     echo "You need to create a cgi-biocomp2/config.py file"
-    echo "Tip: create a symbolic link from the appropriate example file - "
+    echo "Tip: copy and edit the appropriate example file - "
     echo "     cd cgi-biocomp2"
-    echo "     ln -s config_demo.py config.py"
+    echo "     cp config_demo.py config.py"
+    echo "     nedit config.py"
     echo "     cd .."
     echo ""
 fi
@@ -35,8 +36,13 @@ fi
 mkdir -p $html
 mkdir -p $cgi
 
-# For the purpose of this demo
-#(cd cgi-biocomp2; ln -sf config_demo.py config.py)
+# Create the symbolic links for the api files if they aren't there
+if [ ! -f cgi-biocomp2/db/dbapi.py ]; then
+    (cd cgi-biocomp2/db/; ln -sf dbapi_dummp.py dbapi.py)
+fi
+if [ ! -f cgi-biocomp2/bl/blapi.py ]; then
+    (cd cgi-biocomp2/bl/; ln -sf blapi_dummp.py blapi.py)
+fi
 
 # Create the index.html file
 (cd html; ./index.py > index.html)
